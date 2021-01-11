@@ -8,6 +8,7 @@ const logger = require("morgan");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 
 /*
@@ -26,6 +27,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
+    cookie: { maxAge: 14 * 24 * 60 * 60 },
   })
 );
 
@@ -36,9 +38,11 @@ app.use(
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const itemRouter = require("./routes/item");
 
 app.use("/", indexRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/item", itemRouter);
 
 module.exports = app;
