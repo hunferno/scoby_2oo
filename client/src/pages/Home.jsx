@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature ,Marker} from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const Map = ReactMapboxGl({
@@ -26,9 +26,9 @@ const Home = (props) => {
         }}
         center={[2.350149, 48.852872]}
       >
-        <Layer type="symbol" layout={{ "icon-image": "harbor-15" }}>
-          <Feature coordinates={[2.350149, 48.852872]} />
-        </Layer>
+        <Marker coordinates={[2.350149,48.852972]}>
+            <img alt="" src="/media/kombucha.svg"/>
+        </Marker>
       </Map>
 
       <p>On home /</p>
