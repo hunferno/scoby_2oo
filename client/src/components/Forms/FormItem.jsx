@@ -11,10 +11,8 @@ class ItemForm extends Component {
     quantity: "",
     description: "",
     location: {
-      type: "Point",
-      coordinates: {
-        type: [],
-      },
+      // type: "Point",
+      coordinates: [],
     },
     // image: [],
   };
@@ -58,9 +56,15 @@ class ItemForm extends Component {
   };
 
   handlePlace = (place) => {
-    // this.setState({
-    //   location.coordinates.type= place.target.
-    // })
+    // this.state.location.coordinates = place.center;
+    //   const cat= {name:"foo"}
+    //   cat.name = "feaofa"
+    this.setState({
+      location: {
+        //  ...this.state.location,
+        coordinates: place.center,
+      },
+    });
     // This handle is passed as a callback to the autocomplete component.
     // Take a look at the data and see what you can get from it.
     // Look at the item model to know what you should retrieve and set as state.

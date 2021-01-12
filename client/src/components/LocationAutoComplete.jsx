@@ -11,9 +11,9 @@ class LocationAutoComplete extends Component {
       isLoading: false,
       // lng: 5,
       // lat: 34,
-      lng: 32.0087,
-      lat: 47.8985,
-      zoom: 2,
+      // lng: 32.0087,
+      // lat: 47.8985,
+      // zoom: 2,
     };
     this.handleSearchChange = this.handleSearchChange.bind(this);
 
