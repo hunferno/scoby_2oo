@@ -81,7 +81,7 @@ class FormSignin extends Component {
         </form>
 
         <div className="form-section-bottom">
-          <p>Already have an account? </p>
+          <p>Don't have any account yet? </p>
           <Link className="link" to="/signup">
             Register
           </Link>

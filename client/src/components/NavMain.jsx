@@ -7,6 +7,7 @@ import "../styles/NavMain.css";
 
 const NavMain = (props) => {
   const { authContext } = props;
+  console.log(props);
 
   function handleLogout() {
     apiHandler
